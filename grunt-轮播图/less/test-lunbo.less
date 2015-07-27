@@ -1,0 +1,54 @@
+@import "./base/base.less";
+
+
+body { .bgc(#fff); }
+
+/*.groupBox { .left; .mr(15px); .w(228px); 
+	.groupCon { .group > .9GG; .hidden; }
+}*/
+@media screen and (max-width:1220px){
+	body{.w(1220px);}
+}
+
+/*.groupBox.last { .mr(0); }
+.common_title;
+.words { .border-rc(dotted); .p0_13; }
+.ico {
+	&1, &2, &3, &4, &5, &6 , &7, &8 { background: url("@{pic_url}/images/welcome/wel_ico2.png") no-repeat;
+		.left; .h(26px);
+	}
+	&1 { .bp(0,-1px); .w(158px); }
+	&2 { .bp(0,-44px); .w(78px); }
+	&3 { .bp(0,-82px); .w(78px); }
+	&4 { .bp(0,-119px); .w(78px); }
+	&5 { .bp(0,-158px); .w(78px); }
+	&6 { .bp(0,-201px); .w(120px); }
+	&7 { .bp(0,-238px); .w(160px); }
+	&8 { .bp(-79px,-44px); .w(78px); }
+}*/
+.top_bnr { .bgc(#f7f7f7); .border-bc(solid); .h(419px); .hidden; .w(100%);
+	.banner { .h(419px); .w(100%); z-index:0; .pr; .hidden; .cursor;
+		li { .left; .w(100%); 
+
+			/*.pa; top: 0px; left: 0; z-index: 0; display: list-item;	*/
+
+			.pic { .block; .h(419px); .w(100%); }
+		}
+	}
+}
+.top_wrap { .auto; .w(1200px);
+	.top_box { .pr; .w(100%); }
+	.bnr_btn_wrap {
+		.pr; top: -232px; z-index: 15;
+		.bnr_btn { .w(100px); .h(44px); .block; .pa; .cursor; .none;}
+		.bnr_btn_left{ left: 239px; background: url("http://i.meilishuo.net/css/images/welcome/bnr_btn_left1.png") no-repeat;}
+		.bnr_btn_right { right: 134px; background: url("http://i.meilishuo.net/css/images/welcome/bnr_btn_right1.png") no-repeat;}
+	}
+	.round { .w(440px); .pa; right: 225px; top: -35px; 
+		.adType{ .tr; 
+			a { .bgwhite; .border-r(10px); .cursor; .i_block; .mr(22px); .h(10px); .w(10px); }
+			a.current { .bgnone; border: 3px solid #fff; .mb(-4px); .h(12px); .w(12px); }
+		}
+	}
+}
+

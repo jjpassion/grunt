@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>图片上传</title>
+</head>
+<style>
+.settings {
+  padding-top: 15px;
+  padding-bottom: 60px;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden
+}
+/*.settings_box {
+  width: 953px;
+  border: 1px solid #ddd;
+  float: right
+}*/
+.setAvatar {
+  /*margin-top: 40px;*/
+  margin-left: 50px;
+  /*margin-bottom: 280px*/
+}
+
+/*#thumbn {
+  width: 400px
+}*/
+
+.setAvatar div {
+  position: relative;
+  margin-bottom: 20px
+}
+
+.setAvatar div .pic_msg {
+  margin-bottom: 20px;
+  display: none;
+  color: #f69
+}
+
+.setAvatar div #thumbn {
+  float: left;
+  margin-right: 40px
+}
+
+.setAvatar div .crop_out {
+  width: 300px;
+  float: left;
+  display: none
+}
+
+.setAvatar div .crop {
+  width: 200px;
+  height: 200px;
+  overflow: hidden
+}
+
+.setAvatar div br {
+  clear: both
+}
+
+.setAvatar div #thumbn {
+  display: none;
+  float: left;
+  margin-right: 20px
+}
+
+.set-pic {
+  margin-left: 50px;
+  margin-top: 40px;
+  padding-bottom: 100px
+}
+
+.img_submit {
+  margin-bottom: 12px;
+  width: 130px;
+  height: 30px;
+  background-color: #ededed;
+  color: #666;
+  line-height: 30px;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  display: inline-block
+}
+
+.img_submit input {
+  opacity: 0;
+  position: absolute;
+  top: 7px;
+  left: 10px
+}
+</style>
+<body>
+  <div class="settings"> 
+   <div class="settings_box"> 
+    <strong class="title">设置头像</strong>
+    <fieldset> 
+     <form id="setAvatar" method="post" action="./imageupload/user_avatar_save" target="upload_file" enctype="multipart/form-data"> 
+      <div class="setAvatar"> 
+       <div> 
+        <div class="img_submit"> 
+         <span>选择上传的图片</span> 
+         <input type="file" name="attach" class="img_submit_in" value="img_submit" /> 
+        </div> 
+        <input type="hidden" name="mode" value="3" /> 
+        <input type="hidden" name="x1" id="x1" value="" /> 
+        <input type="hidden" name="y1" id="y1" value="" /> 
+        <input type="hidden" name="w" id="w" value="" /> 
+        <input type="hidden" name="h" id="h" value="" /> 
+        <iframe id="get_upload_file" name="upload_file" class="none_f" frameborder="0"></iframe> 
+       </div> 
+       <p>选一张您喜欢的照片做头像吧(建议图片尺寸不小于200*200)。支持Jpeg和静态Gif格式，大小不超过2M。</p> 
+       <img src="http://d04.res.meilishuo.net/ap/e/49/ad/113aa77aaa946178b62bc35fb3ae_200_200.cc.jpg" /> 
+       <div class="preview_pic"> 
+        <p class="pic_msg">拖动下方方块，调整头像大小</p> 
+        <img id="thumbn" src="" /> 
+        <div class="crop_out"> 
+         <p class="pic_msg">头像预览</p> 
+         <div class="crop"> 
+          <img src="" class="preview" /> 
+         </div> 
+        </div> 
+        <br /> 
+        <input type="submit" name="save_thumbnail" value="确 认" id="set_submit" class="ext_submit" /> 
+       </div> 
+      </div> 
+     </form>
+    </fieldset> 
+   </div>
+  </div> 
+</body>
+</html>
