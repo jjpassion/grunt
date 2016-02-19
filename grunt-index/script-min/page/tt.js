@@ -82,7 +82,15 @@
     window.define = define;
 }(window));
 ;
-define("page/t2", function(require, exports) {});;
+define("page/t2", function(require, exports) {
+    console.log("t2");
+});;
 define("page/tt", function(require, exports) {
     var t2 = require("page/t2");
+    function add(a, b) {
+        a = a + c;
+        return a + b;
+    }
+    add(1, 2);
+    console.log("tt");
 });

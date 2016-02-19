@@ -82,4 +82,6 @@
     window.define = define;
 }(window));
 ;
-define("page/t2", function(require, exports) {});
+define("page/t2", function(require, exports) {
+    console.log("t2");
+});
